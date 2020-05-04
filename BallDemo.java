@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.awt.geom.*;
+import javafx.scene.shape.Circle;
 
 /**
  * Class BallDemo - provides two short demonstrations showing how to use the 
@@ -39,8 +40,12 @@ public class BallDemo
         myCanvas.wait(500);
         myCanvas.setForegroundColor(Color.gray);
         myCanvas.drawLine(200, 20, 300, 50);
-        myCanvas.wait(500);
         myCanvas.setForegroundColor(Color.blue);
+        myCanvas.drawLine(200, 10, 300, 40);
+        myCanvas.setForegroundColor(Color.pink);
+        myCanvas.drawLine(300, 20, 300, 30);
+        myCanvas.wait(500);
+        myCanvas.setForegroundColor(Color.black);
         myCanvas.drawLine(220, 100, 370, 40);
         myCanvas.wait(500);
         myCanvas.setForegroundColor(Color.green);
@@ -55,6 +60,7 @@ public class BallDemo
         // the shape to draw and move
         int xPos = 10;
         Rectangle rect = new Rectangle(xPos, 150, 30, 20);
+            
 
         // move the rectangle across the screen
         for(int i = 0; i < 200; i ++) {
@@ -99,5 +105,16 @@ public class BallDemo
         }
         ball.erase();
         ball2.erase();
+    }
+    
+    
+    /** 
+     * Desenha uma moldura na janela
+     */
+    
+    public void drawFrame(){
+        myCanvas.setForegroundColor(Color.red);
+        Rectangle rec = new Rectangle(10,10,580,480);
+        myCanvas.draw(rec);
     }
 }
