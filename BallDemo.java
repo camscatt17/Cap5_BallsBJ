@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.awt.geom.*;
 import javafx.scene.shape.Circle;
+import java.awt.Dimension;
 
 /**
  * Class BallDemo - provides two short demonstrations showing how to use the 
@@ -113,8 +114,11 @@ public class BallDemo
      */
     
     public void drawFrame(){
+        Dimension dimension = myCanvas.getSize();
+        int d1 = (int)dimension.getHeight();
+        int d2 = (int)dimension.getWidth();
         myCanvas.setForegroundColor(Color.red);
-        Rectangle rec = new Rectangle(10,10,580,480);
+        Rectangle rec = new Rectangle(10, 10, d1-20, d2-20);
         myCanvas.draw(rec);
     }
 }
